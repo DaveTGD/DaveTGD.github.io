@@ -1,645 +1,398 @@
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <link rel="dns-prefetch" href="//s3.envato.com" />
+<html lang="en-US" style="--vh:8.59px;"><head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#0098c6">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-    
-<script nonce="ccEda+teVlibthAeJ11FdA==">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"NRBR-281af528f2b1e2422b5","applicationID":"13909","transactionName":"NTU0DRQNDwshOmIZBRM3dR8TDg84Nys/FRQYBSoLAxQKAjM=","queueTime":1,"applicationTime":40,"agent":"","atts":"DXgvW1wZQRQtPChSS1QOMhwLByUINi0+BFNaeCgcEAsQDismb0pTRWxpHV8EVwZmNTA="}</script>
-<script nonce="ccEda+teVlibthAeJ11FdA==">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRBR-281af528f2b1e2422b5",applicationID:"13909"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Niko - Resume/CV Preview - ThemeForest</title>
-    <meta name="description" content="&amp;lt;img src=&amp;quot;https://n.foxdsgn.com/old_themes/wp-content/uploads/2019/07/362002367Niko.png&amp;q...">
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-    <meta name="turbo-visit-control" content="reload">
-
-    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/core/index-96f7e62b025c1fdeb8be7e0c0eb08a1b0dc21e74431dd8b245bbcf07cd4b8e37.css" />
-    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/pages/preview/index-004d35cdd5d555cdd3e956d1b916825642de06529f0fe91fd9f390813761d2fc.css" />
-
-      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
-  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
-  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
-<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-precomposed.png" />
-
-    <script src="https://public-assets.envato-static.com/assets/market/pages/full_screen_preview/index-908950ef3ecdc9c38c400187aa20f0f3aaed760661969ce49e5759af43207ec0.js" nonce="ccEda+teVlibthAeJ11FdA=="></script>
-
-    <script nonce="ccEda+teVlibthAeJ11FdA==">
-//<![CDATA[
-      //function to fix height of iframe!
-      var calcHeight = function() {
-        var headerDimensions = $('.preview__header').height();
-        $('.full-screen-preview__frame').height($(window).height() - headerDimensions);
-      }
-
-      $(document).ready(function() {
-        calcHeight();
-      });
-
-      $(window).resize(function() {
-        calcHeight();
-      }).load(function() {
-        calcHeight();
-      });
-
-//]]>
+		<title>Resume – niko</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="niko » Feed" href="https://n.foxdsgn.com/niko/creative/feed/">
+<link rel="alternate" type="application/rss+xml" title="niko » Comments Feed" href="https://n.foxdsgn.com/niko/creative/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/n.foxdsgn.com\/niko\/creative\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="https://n.foxdsgn.com/niko/creative/wp-includes/js/wp-emoji-release.min.js?ver=5.5.1" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://n.foxdsgn.com/niko/creative/wp-includes/css/dist/block-library/style.min.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="https://n.foxdsgn.com/niko/creative/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="niko-fonts-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C500i%2C700%2C900&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="niko-theme-css-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/style.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="icons-styles-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/css/libs/fontawesome.min.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="simple-line-icons-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/css/libs/simple-line-icons.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/css/libs/bootstrap.min.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="custom-scrollbar-styles-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/css/libs/jquery.mCustomScrollbar.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="niko-theme-styles-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/css/main.min.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="background-animation-styles-css" href="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/css/libs/fonts.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var js_data = {"ajaxurl":"https:\/\/n.foxdsgn.com\/niko\/creative\/wp-admin\/admin-ajax.php","siteurl":"https:\/\/n.foxdsgn.com\/niko\/creative\/wp-content\/themes\/niko"};
+/* ]]> */
 </script>
-    
-  </head>
-  <body class="full-screen-preview">
-    <div class="preview__header" data-view="ctaHeader" data-item-id="23936124">
-  <div class="preview__envato-logo">
-    <a class="header-envato_market" href="https://themeforest.net/item/niko-resume-wordpress-theme/23936124">Envato Market</a>
-  </div>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" id="jquery-core-js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://n.foxdsgn.com/niko/creative/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://n.foxdsgn.com/niko/creative/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.5.1">
+<link rel="canonical" href="https://n.foxdsgn.com/niko/creative/my-skills/">
+<link rel="shortlink" href="https://n.foxdsgn.com/niko/creative/?p=307">
+    </head>
 
-  <div id="js-preview__actions" class="preview__actions">
-  <div class="preview__action--buy">
-    <a class="header-buy-now e-btn--3d -color-primary" href="https://themeforest.net/checkout/from_item/23936124?license=regular&amp;support=bundle_6month">Buy now</a>
-  </div>
+<body class="page-template page-template-page-tamplates page-template-main-template page-template-page-tamplatesmain-template-php page page-id-307">
 
+    <!-- PRELOADER START -->
+    <div class="preloader-wrap " style="display: none;">
+        <div class="preloader">
+			
+                <img src="https://n.foxdsgn.com/niko/creative/wp-content/uploads/sites/2/2019/07/nìko-4.png" alt="niko">
+
+			        </div>
+    </div>
+    <!-- PRELOADER END -->
+
+        <audio id="sound-link" class="audio_on_hover" preload="auto">
+			            <source src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/audio/click.mp3" type="audio/mpeg">
+        </audio>
+        <span id="click-block"></span>
+	<div class="site-content">
+
+    <!-- The cursor elements -->
+
+        <div class="site-content__background-color" style="background-color: #0a0000"></div>
+	
+        <div class="site-content__animation" data-background-color="#77a7bc" data-animation-color-1="#83c9d1" data-animation-color-2="#93d6ea" data-animation-color-3="#ffffff">
+        </div>
+	
+    <div class="site-content__sidebar mCustomScrollbar _mCS_1"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+		<section id="search-4" class="widget widget_search"><span class="search-wrap"><form role="search" method="get" class="search-form" action="https://n.foxdsgn.com/niko/creative/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></span></section><section id="archives-5" class="widget widget_archive"><h4 class="widget-title">archive</h4>
+			<ul>
+					<li><a href="https://n.foxdsgn.com/niko/creative/2019/04/">April 2019</a>&nbsp;(1)</li>
+	<li><a href="https://n.foxdsgn.com/niko/creative/2019/03/">March 2019</a>&nbsp;(2)</li>
+	<li><a href="https://n.foxdsgn.com/niko/creative/2019/02/">February 2019</a>&nbsp;(1)</li>
+	<li><a href="https://n.foxdsgn.com/niko/creative/2019/01/">January 2019</a>&nbsp;(1)</li>
+			</ul>
+
+			</section><section id="archives-6" class="widget widget_archive"><h4 class="widget-title">archive dropdown</h4>		<label class="screen-reader-text" for="archives-dropdown-6">archive dropdown</label>
+		<span class="select-wrap"><select id="archives-dropdown-6" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://n.foxdsgn.com/niko/creative/2019/04/"> April 2019 </option>
+	<option value="https://n.foxdsgn.com/niko/creative/2019/03/"> March 2019 </option>
+	<option value="https://n.foxdsgn.com/niko/creative/2019/02/"> February 2019 </option>
+	<option value="https://n.foxdsgn.com/niko/creative/2019/01/"> January 2019 </option>
+
+		</select></span>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-6" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</section><section id="categories-4" class="widget widget_categories"><h4 class="widget-title">categories</h4>
+			<ul>
+					<li class="cat-item cat-item-2"><a href="https://n.foxdsgn.com/niko/creative/category/design/">Design</a> (1)
+</li>
+	<li class="cat-item cat-item-1"><a href="https://n.foxdsgn.com/niko/creative/category/guide/">Guide</a> (4)
+</li>
+			</ul>
+
+			</section><section id="pages-2" class="widget widget_pages"><h4 class="widget-title">pages</h4>
+			<ul>
+				<li class="page_item page-item-49"><a href="https://n.foxdsgn.com/niko/creative/">about me</a></li>
+<li class="page_item page-item-151"><a href="https://n.foxdsgn.com/niko/creative/contact-me/">contact me</a></li>
+<li class="page_item page-item-171"><a href="https://n.foxdsgn.com/niko/creative/blog/">My blog</a></li>
+<li class="page_item page-item-210"><a href="https://n.foxdsgn.com/niko/creative/my-works/">My works</a></li>
+<li class="page_item page-item-307 current_page_item"><a href="https://n.foxdsgn.com/niko/creative/my-skills/" aria-current="page">Resume</a></li>
+<li class="page_item page-item-2"><a href="https://n.foxdsgn.com/niko/creative/sample-page/">Sample Page</a></li>
+<li class="page_item page-item-402"><a href="https://n.foxdsgn.com/niko/creative/sample-page-2/">Sample Page</a></li>
+			</ul>
+
+			</section>    </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 697px; max-height: 819px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+
+    <span class="sidebar-js"></span>
+
+    <span class="overlay"></span>
+    <div class="site-content__inner">
+    <div class="container height-100">
+    <div class="row height-100 overflow-hidden">
+    <div class="col-lg-6 p-0 site-content__inner-left">
+		
+<div class="site-content__head">
+	<div class="left-menu">
+		<div class="left-menu__sidebar-btn">
+            <i class="icon-menu"></i>
+        </div>
+		<div class="left-menu__menu-list">
+			<div class="menu-main-menu-container"><ul id="left-menu" class="menu mCustomScrollbar _mCS_2"><div id="mCSB_2" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr"><li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-405 icon_for_child icon-user"><a title="						" href="https://n.foxdsgn.com/niko/creative/">Home</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406 icon_for_child icon-bubble"><a title="						" href="https://n.foxdsgn.com/niko/creative/contact-me/">Contact Me</a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407 icon_for_child icon-note"><a title="						" href="https://n.foxdsgn.com/niko/creative/blog/">My Blog</a></li>
+<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408 icon_for_child icon-eyeglass"><a title="						" href="https://n.foxdsgn.com/niko/creative/my-works/">My Works</a></li>
+<li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-307 current_page_item menu-item-404 icon_for_child icon-briefcase"><a title="						" href="https://n.foxdsgn.com/niko/creative/my-skills/" aria-current="page">Resume</a></li>
+</div><div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 260px; max-height: 250px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></ul></div>        </div>
+		<div class="left-menu__download">
+                            <a class="left-menu__download-btn" href="https://n.foxdsgn.com/niko/creative/wp-content/uploads/sites/2/2019/07/cv_template_sheet_en.pdf" download="">
+                    <i class="icon-cloud-download"></i>
+                </a>
+                    </div>
+	</div>
+
+            <div class="person">
+                           <div class="person__avatar s-back-switch" style="background-image: url(&quot;https://n.foxdsgn.com/niko/creative/wp-content/uploads/sites/2/2019/06/image.jpg&quot;);">
+                    <img class="s-img-switch" src="https://n.foxdsgn.com/niko/creative/wp-content/uploads/sites/2/2019/06/image.jpg" alt="image" style="display: none;">
+                </div>
+            
+            <div class="person__info">
+                                    <h2 class="person__name">George Niko</h2>
+                                    <div class="person__position">
+                                                    <span>Photographer</span>
+                                            </div>
+                                    <div class="person__socials">
+                        <ul class="person__socials-list">
+                                                            <li>
+                                    <a href="https://www.facebook.com/">
+                                        <i class="fa-facebook"></i>
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="https://dribbble.com/">
+                                        <i class="fa-dribbble"></i>
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.linkedin.com/">
+                                        <i class="fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.behance.net/">
+                                        <i class="fa-behance"></i>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-lg-6 p-0 site-content__inner-right">
+        <div class="site-content__page">
+            <div class="site-content__page-wrap mCustomScrollbar _mCS_3"><div id="mCSB_3" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_3_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+
+
+<header class="entry-header">
+                <h1 class="entry-title">Resume</h1>
+	    </header>
+
+<div class="niko-sc niko-sc--about">
+	        <div class="niko-sc__about-list">
+			                <div class="niko-sc__about-item">
+					10 years in design                </div>
+			                <div class="niko-sc__about-item">
+					6 years in coding                </div>
+			                <div class="niko-sc__about-item">
+					master`s degree                </div>
+			        </div>
+	        <div class="niko-sc__about-description">
+            Web Developer with 10 years of experience in designing and developing user interfaces, testing, debugging, and training staff within eCommerce technologies. Proven ability in optimizing web functionality that improve data retrieval and workflow efficiencies.        </div>
+	</div>
+
+<div class="niko-sc niko-sc--skills">
+	        <div class="niko-sc__title-wrap">
+			                <i class="niko-sc__title-icon icon-speedometer"></i>
+			            <h3 class="niko-sc__title">Skills</h3>
+        </div>
+	        <div class="niko-sc__skills-list">
+			                <div class="niko-sc__skills-item active" data-value="95">
+                    <span class="niko-sc__skills-name">
+                        web development                    </span>
+                    <div class="niko-sc__skills-value">
+                        <span class="counter" data-from="0" data-speed="1500" data-to="95">95</span>%
+                    </div>
+                    <div class="niko-sc__skills-line">
+                        <div class="active-line" style="width: 95%; opacity: 1;"></div>
+                    </div>
+                </div>
+			                <div class="niko-sc__skills-item active" data-value="89">
+                    <span class="niko-sc__skills-name">
+                        data base                    </span>
+                    <div class="niko-sc__skills-value">
+                        <span class="counter" data-from="0" data-speed="1500" data-to="89">89</span>%
+                    </div>
+                    <div class="niko-sc__skills-line">
+                        <div class="active-line" style="width: 89%; opacity: 1;"></div>
+                    </div>
+                </div>
+			                <div class="niko-sc__skills-item active" data-value="97">
+                    <span class="niko-sc__skills-name">
+                        seo optimisation                    </span>
+                    <div class="niko-sc__skills-value">
+                        <span class="counter" data-from="0" data-speed="1500" data-to="97">97</span>%
+                    </div>
+                    <div class="niko-sc__skills-line">
+                        <div class="active-line" style="width: 97%; opacity: 1;"></div>
+                    </div>
+                </div>
+			                <div class="niko-sc__skills-item active" data-value="92">
+                    <span class="niko-sc__skills-name">
+                        ui/ux design                    </span>
+                    <div class="niko-sc__skills-value">
+                        <span class="counter" data-from="0" data-speed="1500" data-to="92">92</span>%
+                    </div>
+                    <div class="niko-sc__skills-line">
+                        <div class="active-line" style="width: 92%; opacity: 1;"></div>
+                    </div>
+                </div>
+			                <div class="niko-sc__skills-item active" data-value="90">
+                    <span class="niko-sc__skills-name">
+                        graphic design                    </span>
+                    <div class="niko-sc__skills-value">
+                        <span class="counter" data-from="0" data-speed="1500" data-to="90">90</span>%
+                    </div>
+                    <div class="niko-sc__skills-line">
+                        <div class="active-line" style="width: 90%; opacity: 1;"></div>
+                    </div>
+                </div>
+			        </div>
+	</div>
+
+<div class="niko-sc niko-sc--experience">
+	        <div class="niko-sc__exp-educ-list">
+            <div class="niko-sc__educ">
+	                            <div class="niko-sc__experience-title-wrap niko-sc__title-wrap">
+		                                    <i class="niko-sc__experience-title-icon niko-sc__title-icon icon-graduation"></i>
+		                                <h3 class="niko-sc__experience-title niko-sc__title">education</h3>
+                </div>
+	                            <div class="niko-sc__experience-list">
+		                                    <div class="niko-sc__experience-item">
+				                                            <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2012</span>
+						                                                    <span class="niko-sc__experience-end">2013</span>
+						                                            </div>
+				                                            <h5 class="niko-sc__experience-name">design school</h5>
+				                                            <div class="niko-sc__experience-region">London</div>
+				                                            <div class="niko-sc__experience-description">Master of Science in Information and Communications Technology with a concentration in Web Design and Development</div>
+				                                    </div>
+		                                    <div class="niko-sc__experience-item">
+				                                            <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2007</span>
+						                                                    <span class="niko-sc__experience-end">2012</span>
+						                                            </div>
+				                                            <h5 class="niko-sc__experience-name">oxford univercity</h5>
+				                                            <div class="niko-sc__experience-region">Oxford</div>
+				                                            <div class="niko-sc__experience-description">Master of degree, Software Engineering and Systems Security
 </div>
+				                                    </div>
+		                                    <div class="niko-sc__experience-item">
+				                                            <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2002</span>
+						                                                    <span class="niko-sc__experience-end">2007</span>
+						                                            </div>
+				                                            <h5 class="niko-sc__experience-name">high school</h5>
+				                                            <div class="niko-sc__experience-region">Manchester</div>
+				                                            <div class="niko-sc__experience-description">Member of the National Honors Society and National Art Education Association
 </div>
-<iframe class="full-screen-preview__frame" src="//view.foxdsgn.com/niko" name="preview-frame" frameborder="0" noresize="noresize" data-view="fullScreenPreview" allow="geolocation 'self'; autoplay 'self'">
-</iframe>
+				                                    </div>
+		                            </div>
+            </div>
+            <div class="niko-sc__exp">
+		                            <div class="niko-sc__experience-title-wrap niko-sc__title-wrap">
+				                                    <i class="niko-sc__experience-title-icon niko-sc__title-icon icon-briefcase"></i>
+				                                <h3 class="niko-sc__experience-title niko-sc__title">exprerience</h3>
+                    </div>
+		                        <div class="niko-sc__experience-list">
+			                                <div class="niko-sc__experience-item">
+					                                        <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2016</span>
+							                                                <span class="niko-sc__experience-end">nowadays</span>
+							                                        </div>
+					                                        <h5 class="niko-sc__experience-name">true themes inc., senior programmer</h5>
+					                                        <div class="niko-sc__experience-region">London</div>
+					                                        <div class="niko-sc__experience-description">Lead developer and systems architect designing several high traffic custom e-commerce websites</div>
+					                                </div>
+			                                <div class="niko-sc__experience-item">
+					                                        <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2014</span>
+							                                                <span class="niko-sc__experience-end">2016</span>
+							                                        </div>
+					                                        <h5 class="niko-sc__experience-name">apple inc., senior web developer</h5>
+					                                        <div class="niko-sc__experience-region">Oxford</div>
+					                                        <div class="niko-sc__experience-description">Developed and delivered high-end website solutions to a diverse client base by utilizing wide-ranging technologies and frameworks.
+</div>
+					                                </div>
+			                                <div class="niko-sc__experience-item">
+					                                        <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2013</span>
+							                                                <span class="niko-sc__experience-end">2014</span>
+							                                        </div>
+					                                        <h5 class="niko-sc__experience-name">google, full-stack web development</h5>
+					                                        <div class="niko-sc__experience-region">London</div>
+					                                        <div class="niko-sc__experience-description">Facilitating cutting-edge engineering solutions with a wide range of e-commerce application and technology skills.</div>
+					                                </div>
+			                                <div class="niko-sc__experience-item">
+					                                        <div class="niko-sc__experience-period">
+                                    <span class="niko-sc__experience-start">2011</span>
+							                                                <span class="niko-sc__experience-end">2013</span>
+							                                        </div>
+					                                        <h5 class="niko-sc__experience-name">amazon, software engineer</h5>
+					                                        <div class="niko-sc__experience-region">London</div>
+					                                        <div class="niko-sc__experience-description">Partnered with designers to implement custom web-based simulations for client review.</div>
+					                                </div>
+			                        </div>
+            </div>
+        </div>
+	</div>                        </div><div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 367px; max-height: 849px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- #content -->
+</div><!-- #page -->
 
-
-    <script nonce="ccEda+teVlibthAeJ11FdA==">
-//<![CDATA[
-      $(function(){viewloader.execute(Views);});
-
-//]]>
+<link rel="stylesheet" id="niko_dynamic-css-css" href="https://n.foxdsgn.com/niko/creative/wp-admin/admin-ajax.php?action=niko_dynamic_css&amp;post=307&amp;ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/n.foxdsgn.com\/niko\/creative\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
 </script>
-    
-<div id="affiliate-tracker" class="is-hidden" data-view="affiliatesTracker" data-cookiebot-enabled="true"></div>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.2.2" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/libs/p5.min.js?ver=5.5.1" id="p-five-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/libs/sketch.js?ver=5.5.1" id="sketch-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/libs/jquery.mCustomScrollbar.concat.min.js?ver=5.5.1" id="custom-scrollbar-script-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/libs/isotope.pkgd.min.js?ver=5.5.1" id="isotope-script-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/helpers.js?ver=5.5.1" id="niko-helper-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/google-map.js?ver=5.5.1" id="niko-google-map-init-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/script.js?ver=5.5.1" id="niko-main-script-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-includes/js/wp-embed.min.js?ver=5.5.1" id="wp-embed-js"></script>
+<script type="text/javascript" src="https://n.foxdsgn.com/niko/creative/wp-content/themes/niko/assets/js/libs/countTo.js?ver=5.5.1" id="counter-script-js"></script>
 
-      <script src="https://consent.cookiebot.com/uc.js" data-cbid="4a6af4ea-f614-41d8-b0a9-8bb6d7fe4799" async="async" id="Cookiebot" nonce="ccEda+teVlibthAeJ11FdA=="></script>
-
-
-  <script nonce="ccEda+teVlibthAeJ11FdA==">
-//<![CDATA[
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-
-    var consentCookie = getCookie('CookieConsent');
-
-    if (consentCookie) {
-      var hasConsent = Market.Helpers.CookieConsent.given('statistics');
-
-      if (hasConsent) {
-        setupGoogleAnalytics();
-        loadGoogleAnalytics();
-        loadLinkingForAllAccounts();
-      }
-    } else {
-      setupGoogleAnalytics();
-      loadGoogleAnalytics();
-      loadLinkingForAllAccounts();
-    }
-
-    window.addEventListener('CookiebotOnAccept', function (e) {
-      if (Cookiebot.consent.statistics) {
-        if (!(window.ga && ga.create)) {
-          setupGoogleAnalytics();
-          loadGoogleAnalytics();
-          loadLinkingForAllAccounts();
-        }
-      } else {
-        unloadGoogleAnalytics()
-      }
-      if (!consentToExperimentsEnrollmentGiven()) {
-        unenrollFromExperiments();
-      }
-    }, false);
-
-  function getCookie(name) {
-    var name = name + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var cookieContent = decodedCookie.split(';');
-
-    for(var i = 0; i <cookieContent.length; i++) {
-      var c = cookieContent[i];
-
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-
-    return false;
-  }
-
-  function delete_cookie_by_name(name) {
-    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  }
-
-  function unloadGoogleAnalytics() {
-    var payload = {"name":"m","allowLinker":true};
-    var accountId = "UA-11834194-7";
-
-    // Set the GA User Opt-out flag
-    window['ga-disable-'+accountId] = true;
-
-    // Do not explicitly make any further calls to ga()
-    ga(payload.name+".remove");
-
-    // Delete any existing GA cookies (_ga, _gat & _gaid) and GA Client ID from localStorage
-    delete_cookie_by_name('_ga');
-    delete_cookie_by_name('_gat');
-    delete_cookie_by_name('_gid');
-
-    // Delete LocalStorage Entries
-    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
-      var clientId = Market.Helpers.GaLsUtils.getClientId();
-
-      if (!clientId) {
-        return;
-      }
-
-      Market.Helpers.GaLsUtils.removeClientId();
-    }
-
-    // Do not transmit the Client ID to other sites upon navigation (i.e. autoLink)
-  }
-
-  function domLoaded() {
-    return new Promise(resolve => {
-      if (
-        document.readyState === 'interactive' ||
-        document.readyState === 'complete'
-      ) {
-        resolve()
-      } else {
-        document.addEventListener(
-          'DOMContentLoaded',
-          () => {
-            resolve()
-          },
-          {
-            capture: true,
-            once: true,
-            passive: true
-          }
-        )
-      }
-    })
-  }
-
-  function consentToExperimentsEnrollmentGiven () {
-    return Market.Helpers.CookieConsent.given('preferences') && Market.Helpers.CookieConsent.given('statistics');
-  }
-
-  function unenrollFromExperiments() {
-    var experimentEnrolmentsDataString = "Q4KMAh3BQ4qNUNsdMXdprg.1"
-    var experimentEnrolments = experimentEnrolmentsDataString.split('!')
-    var experimentEnrolmentsIds = _.map(experimentEnrolments, function(enrolment) {
-      return enrolment.split('.')[0]
-    })
-    var deletedCookies = [];
-
-    _.each(experimentEnrolmentsIds, function(expId) {
-      var cookieName =  "market_experiment_" + expId;
-
-      if ($.cookie(cookieName) != null && $.cookie(cookieName) != '' && typeof($.cookie(cookieName)) != 'undefined') {
-        $.removeCookie(cookieName, { path: '/', domain: '.' + window.location.host });
-        deletedCookies.push(cookieName);
-      }
-    });
-
-    if(deletedCookies.length > 0 && typeof(t) != 'undefined') {
-      ga(t+'.set', "exp", null);
-      ga(t+'.set', "dimension21", null);
-      ga(t+'.set', "dimension22", null);
-    }
-  }
-
-  function setExperimentEnrollments(experimentEnrolmentsDataString) {
-    ga(t+'.set', "exp", experimentEnrolmentsDataString);
-    ga(t+'.set', "dimension21", experimentEnrolmentsDataString);
-    ga(t+'.set', "dimension22", experimentEnrolmentsDataString);
-  }
-
-  function loadLinkingForAllAccounts() {
-    domLoaded().then(() => {
-      var ACCOUNTS = ["m"];
-      window._envGaTrackerNames = ACCOUNTS;
-
-      for (var i = 0; i < ACCOUNTS.length; i++) {
-        t = ACCOUNTS[i];
-
-        ga(t+'.require', 'linker');
-
-        ga(t+'.require', 'linkid', 'linkid.js');
-      };
-
-      document.body.addEventListener('click', function(event) {
-        decorateLink(event);
-      });
-      document.body.addEventListener('contextmenu', function(event) {
-        // Aside from a normal click, we need to handle the variety of ways users
-        // can open a link in a new tab
-        // Right click to open context menu
-        decorateLink(event);
-      });
-      document.body.addEventListener('mousedown', function(event) {
-        // Aside from a normal click, we need to handle the variety of ways users
-        // can open a link in a new tab
-        // Middle mouse button click
-        if (event.button === 1) {
-          decorateLink(event);
-        }
-      });
-    });
-  }
-
-  function decorateLink(event) {
-
-    var ACCOUNTS = ["m"];
-    window._envGaTrackerNames = ACCOUNTS;
-
-    var currentTarget = jQuery(event.target);
-    var link = currentTarget.closest('a')[0];
-    var ourDomains = ["activeden.net","audiojungle.net","themeforest.net","videohive.net","graphicriver.net","3docean.net","codecanyon.net","photodune.net","market.styleguide.envato.com","elements.envato.com","build.envatohostedservices.com","author.envato.com","tutsplus.com","sites.envato.com"];
-    var filteredDomains = ourDomains.filter(function(domain) {
-      return domain !== document.location.hostname;
-    });
-
-    for (var i = 0; i < ACCOUNTS.length; i++) {
-      t = ACCOUNTS[i];
-
-      if (link && link.href) {
-        if (filteredDomains.includes(link.hostname) || currentSiteLinkOpensInNewWindow(link)) {
-          ga(t+'.linker:decorate', link)
-        }
-      }
-    }
-  }
-
-  function currentSiteLinkOpensInNewWindow(link) {
-    return document.location.hostname === link.hostname && link.target === '_blank';
-  }
-
-  function setupGoogleAnalytics() {
-    (function () {
-      var accountId = "UA-11834194-7";
-      window['ga-disable-'+accountId] = false;
-
-      if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
-        var options = {"name":"m","allowLinker":true};
-
-        options.storage = "none";
-        options.clientId = Market.Helpers.GaLsUtils.getClientId();
-
-        var clientIdValid = Market.Helpers.GaLsUtils.clientIdValid(options.clientId);
-        if (!clientIdValid) {
-          options.clientId = null;
-        }
-
-        ga("create", "UA-11834194-7", options);
-        ga(function() {
-          var tracker = ga.getByName(options.name);
-          Market.Helpers.GaLsUtils.storeClientId(tracker.get('clientId'));
-        })
-      } else {
-        ga("create", "UA-11834194-7", {"name":"m","allowLinker":true});
-      }
-
-      var ACCOUNTS = ["m"];
-      window._envGaTrackerNames = ACCOUNTS;
-
-      for (var i = 0; i < ACCOUNTS.length; i++) {
-        t = ACCOUNTS[i];
-
-        ga(t+'.require', "GTM-5VPWWP");
-
-        ga(t+'.require', 'ec');
-
-        ga(t+'.require', 'displayfeatures');
-
-        ga(t+'.set', 'dimension20', 'other')
-
-
-
-
-        if (!getCookie('CookieConsent') || consentToExperimentsEnrollmentGiven()) {
-          var experimentEnrolmentsDataString = "Q4KMAh3BQ4qNUNsdMXdprg.1"
-          setExperimentEnrollments(experimentEnrolmentsDataString);
-        }
-
-          if ('') {
-            ga(t+'.send', {
-              hitType: 'pageview',
-              page: ''
-            });
-          } else if ('') {
-            // append the analytics_suffix to the page path so the flash alert/error type can be tracked
-            var analyticsSuffix = $.trim('').replace(/([A-Z])/g, '$1').replace(/[-_\s]+/g, '-').toLowerCase();
-            var uri = URI(window.location.pathname + window.location.search);
-            uri.path(uri.path() + '/' + analyticsSuffix);
-            var tracking_path = uri.path() + uri.search();
-            ga(t+'.send', {
-              hitType: 'pageview',
-              page: tracking_path,
-            });
-          } else {
-            ga(t+'.send', 'pageview');
-          }
-      }
-
-      loadLinkingForAllAccounts()
-    }());
-  }
-
-  function loadGoogleAnalytics() {
-    (function () {
-
-      var s=document.createElement('script');
-      s.type='text/javascript';
-      s.async=true;
-        s.src='https://www.google-analytics.com/analytics.js';
-      var x=document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s,x);
-    }());
-  }
-
-  
-    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
-      var clientId = Market.Helpers.GaLsUtils.getClientId();
-
-      ga("create", "UA-45099582-1", "auto", {
-        name: "author_analytics",
-        allowLinker: true,
-        storage: "none",
-        clientId: clientId,
-        alwaysSendReferrer: true
-      });
-    } else {
-      ga("create", "UA-45099582-1", "auto", {
-        name: "author_analytics",
-        allowLinker: true,
-        alwaysSendReferrer: true
-      });
-    }
-
-
-      ga("author_analytics.send", "pageview");
-
-
-
-
-//]]>
-</script>
-
-  
-<script nonce="ccEda+teVlibthAeJ11FdA==">
-//<![CDATA[
-
-    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.statistics ) {
-      enableGoogleAnalyticsLinkWrapper();
-    } else {
-      window.addEventListener('CookiebotOnAccept', function (e) {
-        if (Cookiebot.consent.statistics) {
-          enableGoogleAnalyticsLinkWrapper();
-        }
-      }, false);
-    }
-
-  function enableGoogleAnalyticsLinkWrapper() {
-    // GA: universal analytics link wrapper
-    (function(){
-        window._envTrkrs = [["m", "UA-11834194-7"]];
-
-        var debug = false;
-        var MAX_RETRIES = 10;
-
-        /*
-           The script needs to wait until the Analytics script
-           has been downloaded from Google before initializing
-        */
-        var waitForAnalytics = function(){
-            this.count = this.count || 0;
-
-            if (window.ga && ga.getByName) {
-                e.init();
-            } else {
-                if (count < MAX_RETRIES) { setTimeout(waitForAnalytics, 250); }
-                count++;
-            }
-        };
-
-        var e = {
-            _envArray: [],
-            _envTrkrs: (window._envTrkrsCust && window._envTrkrsCust.length) ? window._envTrkrs.concat(window._envTrkrsCust) : window._envTrkrs,
-            init: function() {
-                for (var i=0; i < _envTrkrs.length; i++) {
-                  if(!ga.getByName(_envTrkrs[i][0])) {
-                    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
-                      var clientId = Market.Helpers.GaLsUtils.getClientId();
-
-                      ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], storage: "none", clientId: clientId, allowLinker: true});
-                    } else {
-                      ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], allowLinker: true});
-                    }
-                  }
-                }
-
-                document.addEventListener('DOMContentLoaded', function(){
-                    e.wrapperInit();
-                });
-
-                if (debug) {console.log('Initiated');}
-            },
-            wrapperInit: function() {
-                if (typeof window._envIsRunning != 'undefined' || window._envIsRunning == true) {
-                    return
-                }
-                window._envIsRunning = true;
-
-                if (document.addEventListener) {
-                    document.addEventListener('click', function(event){
-                        var target = event.target;
-                        if (target && target.tagName === 'A') {
-                            e._envLinksTracker(event);
-                        }
-                    });
-                }
-            },
-            isInArray: function(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var r = new RegExp(t[n], 'i');
-                    if (r.test(e)) {
-                        return n
-                    }
-                }
-                return -1
-            },
-            _envTrackevent: function(e, t, n, r) {
-                for (var i = 0; i < this._envTrkrs.length; i++) {
-                    var s = this._envTrkrs[i][0].length == 0 ? '' : this._envTrkrs[i][0] + '.';
-                    r.length == 0 ? ga(s + 'send', 'event', e, t, n) : ga(s + 'send', 'event', e, t, n, r)
-                }
-            },
-            _envTrackpageview: function(e, t) {
-                t = t.charAt(0) == '/' ? t : '/' + t;
-                for (var n = 0; n < this._envTrkrs.length; n++) {
-                    var r = this._envTrkrs[n][0].length == 0 ? '' : this._envTrkrs[n][0] + '.';
-                    ga(r + 'send', 'pageview', e + t);
-                }
-            },
-            _envLinksTracker: function(t) {
-                var r = false;
-                var i = {
-                    outbound: {
-                        run: true,
-                        useEvent: true
-                    },
-                    download: {
-                        run: true,
-                        useEvent: true,
-                        reg: ''
-                    },
-                    self: {
-                        run: false,
-                        useEvent: true
-                    },
-                    mail: {
-                        run: true,
-                        useEvent: true
-                    },
-                    ext: /\.(doc.?|xls.?|ppt.?|exe|zip|rar|gz|tar|tgz|dmg|csv|pdf|xpi|txt|mp3)$/i
-                };
-                var s = t.srcElement ? t.srcElement : this;
-                if (t.srcElement) {
-                    r = true
-                }
-                while (s.tagName != 'A') {
-                    s = s.parentNode
-                }
-                if (s.href == undefined || s.href == null) {
-                    return true
-                }
-                var o = s.href;
-                if (o.length == 0) return;
-                var u = s.hostname.toLowerCase();
-                var a = s.pathname;
-                if (a.length == 0) {
-                    a = '/'
-                } else if (a.substr(0, 1) != '/') {
-                    a = '/' + a
-                }
-                var f = s.protocol;
-                var l = s.search;
-                var c = location.hostname;
-                c = c.replace(/^www\./i, '').toLowerCase();
-                u = u.replace(/^www\./i, '').toLowerCase();
-                if (o.match(/^#/)) {
-                    if (i.self.run) {
-                        i.self.useEvent ? e._envTrackevent('self', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/self', '/' + o);
-                        return true
-                    }
-                } else if (f.match(/^mailto:/i)) {
-                    if (i.mail.run) {
-                        o = o.replace(/^mailto:/i, '');
-                        i.mail.useEvent ? e._envTrackevent('mailto', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/mailto', o);
-                        return true
-                    }
-                } else if ((new RegExp(i.ext)).test(a)) {
-                    if (i.download.run) {
-                        o = o.replace(/^https?:\/\//i, '');
-                        i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
-                        return true
-                    }
-                } else if (u == undefined || u.length == 0 || f.match(/^javascript:/i)) {
-                    return
-                } else if ((new RegExp(c + '$', 'i')).test(u) || (new RegExp(u + '$', 'i')).test(c)) {
-                    if (i.download.run && i.download.reg.length != 0) {
-                        if ((new RegExp(i.download.reg, 'i')).test(a + l)) {
-                            o = o.replace(/^https?:\/\//i, '');
-                            i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
-                            return true
-                        }
-                    }
-                } else if (u != c) {
-                    if (e.isInArray(u, e._envArray) == -1) {
-                        if (i.outbound.run) {
-                            i.outbound.useEvent ? e._envTrackevent('outbound', 'click - ' + c, u + a + l, '') : e._envTrackpageview('/virtual/outbound', u + a);
-                            return true
-                        }
-                    } else if (e.isInArray(u, e._envArray) != -1) {
-                        var h = s.target;
-                        if (h != null && h == '_blank') {
-                            if ((new RegExp(/_utma=/)).test(l)) {
-                                return true
-                            }
-                            var p = e._envTrkrs[0][0].length == 0 ? '' : _envTrkrs[0][0] + '.';
-                            return true
-                        } else {
-                            return false
-                        }
-                    }
-                }
-            }
-        };
-
-        waitForAnalytics();
-    })()
-  }
-
-//]]>
-</script>
-
-
-
-<script nonce="ccEda+teVlibthAeJ11FdA==">
-//<![CDATA[
-  // Set New Relic custom attributes
-  (function () {
-    if (typeof newrelic !== 'undefined') {
-      newrelic.setCustomAttribute('pageType', 'other')
-
-      // Log experiment enrolment
-      var experiment_data_string = "Q4KMAh3BQ4qNUNsdMXdprg.1" + "!"
-      newrelic.setCustomAttribute('experiments', experiment_data_string)
-    }
-  })()
-
-//]]>
-</script>
-
-  <script nonce="ccEda+teVlibthAeJ11FdA==">
-//<![CDATA[
-    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.marketing) {
-      enableGoogleTagManager();
-    } else {
-      window.addEventListener('CookiebotOnAccept', function (e) {
-        if (Cookiebot.consent.marketing) {
-          enableGoogleTagManager();
-        }
-      }, false);
-    }
-
-  function enableGoogleTagManager() {
-    var gtmId = 'GTM-585RXMV';
-    // Google Tag Manager Tracking Code
-    (function(w,d,s,l,i) {
-      w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer',gtmId);
-
-
-    window.addEventListener('load', function() {
-      window.dataLayer.push({
-        event: 'pinterestReady'
-      });
-    });
-  }
-
-//]]>
-</script>
 
 </body></html>
