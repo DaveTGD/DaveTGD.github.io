@@ -8,6 +8,7 @@
 }
 
 .mainWindowContent{
+    background-color: #f2f2f2;
     position: absolute;
     margin: 10;
     left: 50%;
@@ -15,3 +16,11 @@
 
 
 }
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+   
